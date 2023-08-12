@@ -1,0 +1,18 @@
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\bin\Debug\BLL.dll
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\bin\Debug\BLL.pdb
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\bin\Debug\AutoMapper.dll
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\bin\Debug\DAL.dll
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\bin\Debug\EntityFramework.dll
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\bin\Debug\DAL.pdb
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\bin\Debug\DAL.dll.config
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\bin\Debug\AutoMapper.xml
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\bin\Debug\EntityFramework.xml
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\obj\Debug\BLL.csproj.CopyComplete
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\obj\Debug\BLL.dll
+F:\AIUB-American International University Bangladesh\10th semester\Advance .Net\code\OLP\BLL\obj\Debug\BLL.pdb
+C:\Users\shafi\Downloads\OLP\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\shafi\Downloads\OLP\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\shafi\Downloads\OLP\BLL\obj\Debug\BLL.dll
+C:\Users\shafi\Downloads\OLP\BLL\obj\Debug\BLL.pdb
