@@ -1,16 +1,20 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
+using OLP.AuthFilters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace OLP.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class MyAssignmentController : ApiController
     {
+        [Logged]
         [HttpGet]
         [Route("api/MyAssignment/all")]
         public HttpResponseMessage All()

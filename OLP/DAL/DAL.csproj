@@ -57,6 +57,7 @@
     <Compile Include="EF\Models\Contents.cs" />
     <Compile Include="EF\Models\Course.cs" />
     <Compile Include="EF\Models\Enrollments.cs" />
+    <Compile Include="EF\Models\Feedback.cs" />
     <Compile Include="EF\Models\MyAssignment.cs" />
     <Compile Include="EF\Models\MyCourse.cs" />
     <Compile Include="EF\Models\MySubmission.cs" />
@@ -64,22 +65,24 @@
     <Compile Include="EF\Models\Submission.cs" />
     <Compile Include="EF\Models\Teacher.cs" />
     <Compile Include="EF\Models\Token.cs" />
+    <Compile Include="EF\Models\TokenStudent.cs" />
     <Compile Include="EF\Models\TokenTeacher.cs" />
+    <Compile Include="EF\Models\User.cs" />
+    <Compile Include="EF\Models\WatchList.cs" />
     <Compile Include="EF\OLPContext.cs" />
     <Compile Include="Interfaces\IAdminAuth.cs" />
+    <Compile Include="Interfaces\IAuthStudent.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
+    <Compile Include="Interfaces\ISubMarks.cs" />
     <Compile Include="Interfaces\ITeacherAuth.cs" />
-    <Compile Include="Migrations\202308121421025_[initalltable].cs" />
-    <Compile Include="Migrations\202308121421025_[initalltable].designer.cs">
-      <DependentUpon>202308121421025_[initalltable].cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AdminProfRepo.cs" />
+    <Compile Include="Repos\AdminViewsRepo.cs" />
     <Compile Include="Repos\AssignmentRepos.cs" />
     <Compile Include="Repos\ContentRepos.cs" />
     <Compile Include="Repos\CourseRepos.cs" />
     <Compile Include="Repos\EnrollmentRepos.cs" />
+    <Compile Include="Repos\FeedbackRepos.cs" />
     <Compile Include="Repos\MyAssignmentRepos.cs" />
     <Compile Include="Repos\MyCourseRepos.cs" />
     <Compile Include="Repos\MySubmissionRepos.cs" />
@@ -87,17 +90,16 @@
     <Compile Include="Repos\StudentRepos.cs" />
     <Compile Include="Repos\SubmissionRepos.cs" />
     <Compile Include="Repos\TeacherProfRepos.cs" />
+    <Compile Include="Repos\TeacherViewsRepo.cs" />
     <Compile Include="Repos\TokenAdminRepo.cs" />
+    <Compile Include="Repos\TokenStudentRepos.cs" />
     <Compile Include="Repos\TokenTeacherRepo.cs" />
+    <Compile Include="Repos\UserRepos.cs" />
+    <Compile Include="Repos\WatchListRepos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202308121421025_[initalltable].resx">
-      <DependentUpon>202308121421025_[initalltable].cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

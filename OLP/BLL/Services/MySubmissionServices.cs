@@ -14,12 +14,8 @@ namespace BLL.Services
     {
         public static bool Create(MySubmissionDTO s)
         {
-            var getuser = (from i in DAF.AccessMySubmission().viewAll()
-                           where i.StuId == s.StuId &&
-                           i.AssId == s.AssId
-                           select i).SingleOrDefault();
             var ass = DAF.AccessMyAssignment().view(s.AssId);
-            ass.Stauts = "Submitted";
+            ass.Status = "Submitted";
             DAF.AccessMyAssignment().update(ass);
             var config = new MapperConfiguration(cfg => { cfg.CreateMap<MySubmissionDTO, MySubmission>(); });
             var mapper = new Mapper(config);

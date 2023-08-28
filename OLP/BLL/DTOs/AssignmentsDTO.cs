@@ -16,6 +16,7 @@ namespace BLL.DTOs
         public int tid { get; set; }
 
         public int cid { get; set; }
+        public string status { get; set; }
 
     }
 }

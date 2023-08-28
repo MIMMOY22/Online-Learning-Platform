@@ -35,7 +35,7 @@ namespace BLL.Services
             var config = new MapperConfiguration(cfg => { cfg.CreateMap<AssignmentsDTO, Assignments>(); });
             var mapper = new Mapper(config);
             var cnvt = mapper.Map<Assignments>(a);
-            var data = DAF.AccessAssignments().update( cnvt);
+            var data = DAF.AccessAssignments().update(cnvt);
             return data;
         }
         public static bool DeleteAssignments(int id)

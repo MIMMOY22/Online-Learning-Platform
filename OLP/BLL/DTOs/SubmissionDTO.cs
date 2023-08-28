@@ -15,5 +15,6 @@ namespace BLL.DTOs
         public int aid { get; set; }
 
         public int sid { get; set; }
+        public int marks { get; set; }
     }
 }

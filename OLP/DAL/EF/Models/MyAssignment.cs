@@ -23,10 +23,10 @@ namespace DAL.EF.Models
         public int CrsId { get; set; }
         [ForeignKey("student")]
         public int StuId { get; set; }
-        [DefaultValue("Assigned")]
+        [DefaultValue("ongoing")]
         [Required]
         [StringLength(20)]
-        public string Stauts { get; set; }
+        public string Status { get; set; }
         public virtual Student student { get; set; }
         public virtual Teacher teacher { get; set; }
         public virtual Course course { get; set; }

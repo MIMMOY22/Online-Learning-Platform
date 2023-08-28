@@ -23,7 +23,10 @@ namespace DAL.EF
         public virtual DbSet<Teacher> Teachers { get; set; }
         public virtual DbSet<Token> Tokens { get; set; }
         public virtual DbSet<TokenTeacher> TokenTeachers { get; set; }
-
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<TokenStudent> TokenStudents { get; set; }
+        public virtual DbSet<WatchList> WatchLists { get; set; }
+        public virtual DbSet<Feedback> Feedbacks { get; set; }
 
     }
 }

@@ -8,8 +8,19 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class SubmissionRepos : Repo, IRepo<Submission, bool, int>
+    internal class SubmissionRepos : Repo, IRepo<Submission, bool, int>, ISubMarks
     {
+        public bool AddMarks(int id, int mark)
+        {
+            var data = db.Submissions.Find(id);
+            if (data != null)
+            {
+                data.marks = mark;
+            }
+
+            return db.SaveChanges() > 0;
+        }
+
         public bool create(Submission obj)
         {
             throw new NotImplementedException();
@@ -22,7 +33,7 @@ namespace DAL.Repos
             return db.SaveChanges() > 0;
         }
 
-        public bool update( Submission s)
+        public bool update(Submission s)
         {
             throw new NotImplementedException();
         }

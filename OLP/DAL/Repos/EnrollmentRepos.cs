@@ -22,7 +22,7 @@ namespace DAL.Repos
             return db.SaveChanges() > 0;
         }
 
-        public bool update( Enrollments e)
+        public bool update(Enrollments e)
         {
             throw new NotImplementedException();
         }
@@ -36,5 +36,6 @@ namespace DAL.Repos
         {
             return db.Enrollments.ToList();
         }
+
     }
 }

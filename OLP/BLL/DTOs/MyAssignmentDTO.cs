@@ -13,7 +13,7 @@ namespace BLL.DTOs
         public DateTime Deadline { get; set; }
         public int TsrId { get; set; }
         public int StuId { get; set; }
-        public string Stauts { get; set; }
+        public string Status { get; set; }
         public int CrsId { get; set; }
     }
 }

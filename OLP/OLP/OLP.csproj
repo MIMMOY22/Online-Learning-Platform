@@ -100,20 +100,25 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="AuthFilters\AdminLogged.cs" />
     <Compile Include="AuthFilters\IsAdmin.cs" />
+    <Compile Include="AuthFilters\Logged.cs" />
     <Compile Include="AuthFilters\IsTeacher.cs" />
     <Compile Include="AuthFilters\TeacherLogged.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MyAssignmentController.cs" />
     <Compile Include="Controllers\MyCourseController.cs" />
     <Compile Include="Controllers\MySubmissionController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Controllers\TeacherLoginController.cs" />
+    <Compile Include="Controllers\WatchListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminLoginModel.cs" />
+    <Compile Include="Models\FeedbackModel.cs" />
+    <Compile Include="Models\StudentLoginModel.cs" />
     <Compile Include="Models\TeacherLoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

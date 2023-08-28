@@ -19,7 +19,14 @@ namespace DAL.Repos
         public bool delete(int id)
         {
             var del = db.Assignments.Find(id);
-            db.Assignments.Remove(del);
+            if (del != null)
+            {
+                if (del.deadline > DateTime.Now)
+                {
+                    del.status = "Inactive";
+                }
+            }
+
             return db.SaveChanges() > 0;
         }
 

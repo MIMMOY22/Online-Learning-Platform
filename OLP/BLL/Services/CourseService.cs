@@ -30,7 +30,7 @@ namespace BLL.Services
             var cnvt = mapper.Map<CourseDTO>(data);
             return cnvt;
         }
-        public static bool UpdateCourses( CourseDTO c)
+        public static bool UpdateCourses(CourseDTO c)
         {
             var config = new MapperConfiguration(cfg => { cfg.CreateMap<CourseDTO, Course>(); });
             var mapper = new Mapper(config);
@@ -52,6 +52,20 @@ namespace BLL.Services
             return data;
 
         }
+        public static int CourseViews(int cid)
+        {
+            var count = DAF.AccessTeacherViews().viewAll();
+            var views = (from i in count where i.CrsId == cid select i).ToList().Count();
+            return views;
 
+        }
+        public static int GetStudentProgress(int cid, int sid)
+        {
+            var data = (from i in DAF.AccessTeacherViews().viewAll() where i.CrsId == cid && i.StuId == sid select i).ToList().Count();
+            var data2 = (from j in DAF.AccessContents().viewAll() where j.cid == cid select j).ToList().Count();
+            var res = (data / data2) * 100;
+            return res;
+        }
+       
     }
 }

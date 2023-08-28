@@ -6,9 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace OLP.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class StudentController : ApiController
     {
         [HttpGet]
@@ -17,7 +19,7 @@ namespace OLP.Controllers
         {
             try
             {
-                var data = StudentServices.Get();
+                var data = StudentServices.Get();   
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -25,6 +27,20 @@ namespace OLP.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
 
+        }
+        [HttpGet]
+        [Route("api/Student/{id}/MyCourse")]
+        public HttpResponseMessage GetWithCat(int id)
+        {
+            try
+            {
+                var data = StudentServices.GetWithStnt(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
         }
         [HttpGet]
         [Route("api/Student/{id}")]

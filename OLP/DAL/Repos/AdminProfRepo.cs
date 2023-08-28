@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace DAL.Repos
 {
     internal class AdminProfRepo : Repo, IRepo<Admin, bool, int>, IAdminAuth
@@ -17,27 +19,41 @@ namespace DAL.Repos
         }
         public bool create(Admin obj)
         {
-            throw new NotImplementedException();
+            db.Admins.Add(obj);
+            return db.SaveChanges() > 0;
         }
+
+
 
         public bool delete(int id)
         {
-            throw new NotImplementedException();
+            var exp = db.Admins.Find(id);
+            db.Admins.Remove(exp);
+            return db.SaveChanges() > 0;
         }
+
+
 
         public bool update(Admin obj)
         {
-            throw new NotImplementedException();
+            var exp = db.Admins.Find(obj.id);
+            exp.username = obj.username;
+            exp.password = obj.password;
+            return db.SaveChanges() > 0;
         }
+
+
 
         public Admin view(int id)
         {
-            throw new NotImplementedException();
+            return db.Admins.Find(id);
         }
+
+
 
         public List<Admin> viewAll()
         {
-            throw new NotImplementedException();
+            return db.Admins.ToList();
         }
     }
 }

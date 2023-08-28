@@ -7,9 +7,11 @@ using System.Web;
 using System.Web.Http;
 using OLP.Models;
 using BLL.Services;
+using System.Web.Http.Cors;
 
 namespace OLP.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class AdminLoginController : ApiController
     {
         [HttpPost]
